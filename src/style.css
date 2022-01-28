@@ -7,5 +7,8 @@
 .content {
     height: 100vh;
     width: 100vw;
-    background-color: rgb(170, 62, 22);
+    background-image: url('./images/pexels-viktoria-alipatova-2074130.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
