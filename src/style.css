@@ -44,7 +44,7 @@ h1 {
 .nav-bar a {
     padding: 1.5em 1.5em 1em 1.5em;
 }
-.home-link {
+.selected-page-link {
     border-bottom: 1px solid white;
 }
 

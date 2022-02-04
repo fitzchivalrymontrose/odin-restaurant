@@ -1,41 +1,45 @@
 'use strict';
 import './style.css';
+import { renderHomePage } from './home.js';
+import { renderMenuPage } from './menu';
+import { renderContactPage } from './contact';
 
-console.log(`It's working for now...`);
+export function renderPage(){
+    const content = document.createElement('div');
+    content.classList.add('content');
 
-const content = document.createElement('div');
-content.classList.add('content');
+    const navBar = document.createElement('nav');
+    navBar.classList.add('nav-bar');
 
-const navBar = document.createElement('nav');
-navBar.classList.add('nav-bar');
+    const homeLink = document.createElement('a');
+    homeLink.href = '#';
+    homeLink.textContent = 'Home';
 
-const homeLink = document.createElement('a');
-homeLink.classList.add('home-link');
-homeLink.href = '#';
-homeLink.textContent = 'Home';
+    const menuLink = document.createElement('a');
+    menuLink.href = '#';
+    menuLink.textContent = 'Menu';
 
-const menuLink = document.createElement('a');
-menuLink.classList.add('menu-link');
-menuLink.href = '#';
-menuLink.textContent = 'Menu';
+    const contactLink = document.createElement('a');
+    contactLink.href = '#';
+    contactLink.textContent = 'Contact';
 
-const contactLink = document.createElement('a');
-contactLink.classList.add('contact-link');
-contactLink.href = '#';
-contactLink.textContent = 'Contact';
+    navBar.appendChild(homeLink);
+    navBar.appendChild(menuLink);
+    navBar.appendChild(contactLink);
+    
+    homeLink.addEventListener('click', renderHomePage);
+    menuLink.addEventListener('click', renderMenuPage);
+    contactLink.addEventListener('click', renderContactPage);
 
-navBar.appendChild(homeLink);
-navBar.appendChild(menuLink);
-navBar.appendChild(contactLink);
+    content.appendChild(navBar);
 
-const pageContent = document.createElement('div');
-pageContent.classList.add('page-content');
+    document.body.appendChild(content);
+}
 
-const pageContentText = document.createElement('p');
-pageContentText.textContent = 'COFFEE, coffee coffee coffee coffee!!!\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci ac auctor augue mauris augue. Purus sit amet volutpat consequat mauris nunc congue. Et malesuada fames ac turpis. Viverra nibh cras pulvinar mattis nunc sed. Eu mi bibendum neque egestas congue quisque egestas diam in. Sed felis eget velit aliquet sagittis id consectetur. Cursus sit amet dictum sit amet justo. Id consectetur purus ut faucibus pulvinar elementum. Cursus eget nunc scelerisque viverra mauris in aliquam sem. Tincidunt arcu non sodales neque sodales. Ullamcorper velit sed ullamcorper morbi. Interdum consectetur libero id faucibus. A diam sollicitudin tempor id eu nisl. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci ac auctor augue mauris augue. Purus sit amet volutpat consequat mauris nunc congue. Et malesuada fames ac turpis. Viverra nibh cras pulvinar mattis nunc sed. Eu mi bibendum neque egestas congue quisque egestas diam in. Sed felis eget velit aliquet sagittis id consectetur. Cursus sit amet dictum sit amet justo. Id consectetur purus ut faucibus pulvinar elementum. Cursus eget nunc scelerisque viverra mauris in aliquam sem. Tincidunt arcu non sodales neque sodales. Ullamcorper velit sed ullamcorper morbi. Interdum consectetur libero id faucibus. A diam sollicitudin tempor id eu nisl. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada.';
-pageContent.appendChild(pageContentText);
+export function clearContent(){
+    while(content.lastChild){
+        content.removeChild(content.lastChild);
+    }
+}
 
-content.appendChild(navBar);
-content.appendChild(pageContent);
-
-document.body.appendChild(content);
+renderHomePage();
