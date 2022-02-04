@@ -1,5 +1,5 @@
 'use strict';
-import {clearContent, renderPage} from './index.js';
+import {clearContent, renderPage, content, homeLink, menuLink, contactLink} from './index.js';
 
 export function renderHomePage(){
     clearContent();

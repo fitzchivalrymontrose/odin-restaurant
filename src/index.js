@@ -4,22 +4,24 @@ import { renderHomePage } from './home.js';
 import { renderMenuPage } from './menu';
 import { renderContactPage } from './contact';
 
+export const content = document.createElement('div');
+export const navBar = document.createElement('nav');
+export const homeLink = document.createElement('a');
+export const menuLink = document.createElement('a');
+export const contactLink = document.createElement('a');
+
+
 export function renderPage(){
-    const content = document.createElement('div');
     content.classList.add('content');
 
-    const navBar = document.createElement('nav');
     navBar.classList.add('nav-bar');
 
-    const homeLink = document.createElement('a');
     homeLink.href = '#';
     homeLink.textContent = 'Home';
 
-    const menuLink = document.createElement('a');
     menuLink.href = '#';
     menuLink.textContent = 'Menu';
 
-    const contactLink = document.createElement('a');
     contactLink.href = '#';
     contactLink.textContent = 'Contact';
 
@@ -37,6 +39,9 @@ export function renderPage(){
 }
 
 export function clearContent(){
+    homeLink.classList.remove('selected-page-link');
+    menuLink.classList.remove('selected-page-link');
+    contactLink.classList.remove('selected-page-link');
     while(content.lastChild){
         content.removeChild(content.lastChild);
     }
