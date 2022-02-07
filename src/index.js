@@ -4,6 +4,7 @@ import { renderHomePage } from './home.js';
 import { renderMenuPage } from './menu';
 import { renderContactPage } from './contact';
 
+
 export const content = document.createElement('div');
 export const navBar = document.createElement('nav');
 export const homeLink = document.createElement('a');

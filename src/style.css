@@ -60,3 +60,30 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
+
+/* Menu page */
+.page-content-menu {
+    display: flex;
+    height: 100vh;
+}
+
+.card1,
+.card2,
+.card3 {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 200px;
+}
+
+.card-1-pic {
+    background-image: url('./images/01pexels-andrew-neel-4264049.jpg');
+}
+
+.card-2-pic {
+    background-image: url('./images/02pexels-chevanon-photography-312418.jpg');
+}
+
+.card-3-pic {
+    background-image: url('./images/03pexels-oleg-magni-890515.jpg');
+}
