@@ -10,6 +10,7 @@ export function renderMenuPage(){
     pageContent.classList.add('page-content-menu');
 
     const card1 = document.createElement('div');
+    card1.classList.add('card1');
     const card1Pic = document.createElement('div');
     card1Pic.classList.add('card-1-pic');
     const card1Text = document.createElement('p');
@@ -18,6 +19,7 @@ export function renderMenuPage(){
     card1.appendChild(card1Text);
 
     const card2 = document.createElement('div');
+    card2.classList.add('card2');
     const card2Pic = document.createElement('div');
     card2Pic.classList.add('card-2-pic');
     const card2Text = document.createElement('p');
@@ -26,6 +28,7 @@ export function renderMenuPage(){
     card2.appendChild(card2Text);
 
     const card3 = document.createElement('div');
+    card3.classList.add('card3');
     const card3Pic = document.createElement('div');
     card3Pic.classList.add('card-3-pic');
     const card3Text = document.createElement('p');
